@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homeverse - Find your dream house</title>
+  <title>MyHome - Find your dream house</title>
 
   <!-- 
     - favicon
@@ -43,10 +43,10 @@
         <ul class="header-top-list">
 
           <li>
-            <a href="mailto:info@homeverse.com" class="header-top-link">
+            <a href="mailto:info@myhome.com" class="header-top-link">
               <ion-icon name="mail-outline"></ion-icon>
 
-              <span>info@homeverse.com</span>
+              <span>info@myhome.com</span>
             </a>
           </li>
 
@@ -182,6 +182,34 @@
   </header>
 
 
+<div id="enquiry-form-container" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1000; border-radius: 8px;">
+  <form id="enquiry-form-container">
+    <h2>Make an Enquiry</h2>
+    <label for="full-name">Full Name:</label>
+    <input type="text" id="full-name" name="full-name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="budget">Budget:</label>
+    <input type="number" id="budget" name="budget" required><br><br>
+
+    <label for="type">Type:</label>
+    <select id="type" name="type">
+      <option value="rental">Rental</option>
+      <option value="buying">Buying</option>
+    </select><br><br>
+
+    <label>Preferred Contact:</label>
+    <input type="radio" id="contact-call" name="contact-preference" value="call" required>
+    <label for="contact-call">Call</label>
+    <input type="radio" id="contact-sms" name="contact-preference" value="sms" required>
+    <label for="contact-sms">SMS</label><br><br>
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" id="close-form" class="btn">Cancel</button>
+  </form>
+</div>
 
 
 
@@ -1290,10 +1318,10 @@
             </li>
 
             <li>
-              <a href="mailto:contact@homeverse.com" class="contact-link">
+              <a href="mailto:contact@myhome.com" class="contact-link">
                 <ion-icon name="mail-outline"></ion-icon>
 
-                <span>contact@homeverse.com</span>
+                <span>contact@myhome.com</span>
               </a>
             </li>
 
@@ -1436,7 +1464,7 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2022 <a href="#">codewithsadee</a>. All Rights Reserved
+          &copy; 2025 <a href="#">DevangMestry</a>. All Rights Reserved
         </p>
 
       </div>
