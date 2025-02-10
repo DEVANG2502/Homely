@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyHome - Find your dream house</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
 
   <!-- 
     - favicon
@@ -31,8 +33,20 @@
 
   <!-- 
     - #HEADER
-  -->
+  --<header class="header">
+        <div class="container flex justify-between items-center p-4 bg-white shadow">
+            <a href="mailto:info@myhome.com" class="text-gray-700">info@myhome.com</a>
 
+            <!-- Login button (visible only if user is not logged in) -->
+             <header class="bg-white shadow-md p-4">
+        <div class="container flex justify-between">
+            <a href="mailto:info@myhome.com" class="text-gray-700">info@myhome.com</a>
+            <div>
+                <a href="javascript:void(0);" id="logout-btn" class="text-red-500" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </header>
+ 
   <header class="header" data-header>
 
     <div class="overlay" data-overlay></div>
@@ -1069,6 +1083,10 @@
 
 
 
+<section id="map-filter">
+  <h2>Find Properties on Map</h2>
+  <div id="map"></div>
+</section>
 
       <!-- 
         - #BLOG
@@ -1459,6 +1477,11 @@
 
       </div>
     </div>
+   
+
+<!-- Leaflet.js Stylesheet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
 
     <div class="footer-bottom">
       <div class="container">
@@ -1479,7 +1502,10 @@
   <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+  <!-- <script src="./assets/js/script.js"></script> -->
+   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="./assets/js/script.js"></script>
+
 
   <!-- 
     - ionicon link

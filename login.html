@@ -1,0 +1,37 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyD9RZC0l1mPEsZNzwGpPMPFqc4_wPlFU3c",
+  authDomain: "login-ff4a3.firebaseapp.com",
+  projectId: "login-ff4a3",
+  storageBucket: "login-ff4a3.firebasestorage.app",
+  messagingSenderId: "777300705725",
+  appId: "1:777300705725:web:565f8884a9e827f57852d4"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in successfully
+            const user = userCredential.user;
+
+            // Store the user's authentication state
+            localStorage.setItem("user", JSON.stringify(user));  // Storing user info in localStorage
+            window.location.href = "index.html";  // Redirect to home page after successful login
+        })
+        .catch((error) => {
+            console.error("Error logging in: ", error.message);
+            alert("Login failed: " + error.message);
+        });
+});
